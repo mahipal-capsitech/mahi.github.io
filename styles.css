@@ -729,5 +729,6 @@ div.alert span{
   float: right;
   padding-left: 1rem;
   cursor: pointer;
+  color: rgb(2, 62, 2);
   
 }
