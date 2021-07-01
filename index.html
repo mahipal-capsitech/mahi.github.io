@@ -13,9 +13,10 @@
   <!-- Glidejs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
   <!-- Custom StyleSheet -->
+ 
   <link rel="stylesheet" href="styles.css" />
   <title>Portfolio of Mahipal</title>
-
+ 
 </head>
 
 <body>
@@ -333,22 +334,24 @@
         <form class="form">
           <h2>Message me</h2>
           <div>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Name" id="txt1" required/>
+            <input type="email" placeholder="Email" id="txt2" required/>
           </div>
-          <input type="text" placeholder="Subject" />
-          <textarea cols="10" rows="10" placeholder="Describe Project"></textarea>
+          <input type="text" placeholder="Subject" id="txt3"/>
+          <textarea cols="10" rows="10" placeholder="Describe Project"  id="txt4"></textarea>
 
-          <a href="#" class="btn">Send message</a>
+          <a class="btn" onclick="fun()" type="submit">Send message</a>
         </form>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Created By <span><a href="thumbnail/index.php">Mahi-Code</a></span> | &copy; 2021 All rights reserved.</p>
+    <p>Created By <span>Mahi-Code</span> | &copy; 2021 All rights reserved.</p>
   </footer>
-
+  <div class="alert" id="alert">
+    <p>Your Massage is Sent to Mahi-Code Developer <span onclick="off()"> X</span></p>
+  </div>
   <!-- AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- Typeit -->
@@ -359,6 +362,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <!-- Custom Script -->
   <script src="index.js"></script>
+  <script>
+    function fun(){
+      document.getElementById("txt1").value="";
+      document.getElementById("txt2").value="";
+      document.getElementById("txt3").value="";
+      document.getElementById("txt4").value="";
+      document.getElementById("alert").style.display="flex";
+    }
+    function off(){
+      document.getElementById("alert").style.display="none";
+    }
+  </script>
 </body>
 
 </html>
