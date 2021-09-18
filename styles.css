@@ -575,10 +575,10 @@ a.btn:active {
 
 .team .img-cover {
   overflow: hidden;
-  border-radius: 100%;
-  border: 4px solid #dd9a05;
-  height: 13rem;
-  width: 13rem;
+  border-radius: 5px;
+  border: 0.5px solid #dd9a05;
+  /* height: 500px; */
+  width: 300px;
   margin: 0 auto;
   transition: all 300ms ease-in-out;
 }
